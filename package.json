@@ -4,11 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:run": "cypress run",
+    "test": "$(npm bin)/cypress run --reporter mochawesome",
+    "test-headed": "npm run test -- --headed --reporter mochawesome",
+    "test-chrome": "npm run test -- --browser chrome --reporter mochawesome",
+    "test-firefox": "npm run test -- --browser firefox --reporter mochawesome",
+    "test-suite": "npm run test -- --spec 'cypress/integration/examples/learning/*.spec.js' --browser 'chrome' --record --key 547e5cdd-66ec-4d86-90ec-887e870d9155 --reporter mochawesome"
   },
   "author": "pkt",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^5.6.0"
+    "cypress": "^5.6.0",
+    "mocha": "8.2.1",
+    "mochawesome": "6.1.1"
   }
 }

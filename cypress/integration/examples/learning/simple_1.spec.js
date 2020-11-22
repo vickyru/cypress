@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe("Calculator App", () =>{
+describe("Calculator App Test 2", () =>{
     before(() => {
         cy.log('Starting Calculator Regression Suite')
         cy.visit('https://juliemr.github.io/protractor-demo/')

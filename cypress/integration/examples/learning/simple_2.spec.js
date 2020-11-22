@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe("Calculator App", function(){
+describe("Calculator App Test 3", function(){
     before(function () {
         cy.fixture('learning/simple_2').then(function(data){
             this.data=data
