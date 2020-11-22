@@ -6,7 +6,7 @@ describe("Calculator App", () =>{
         cy.visit('https://juliemr.github.io/protractor-demo/')
       })
 
-    beforeEach(()=>{
+    beforeEach(function(){
         cy.get("input[ng-model='first']").as('firstInput')
         cy.get("select[ng-model='operator']").as('operator')
         cy.get("input[ng-model='second']").as('secondInput')
@@ -14,7 +14,7 @@ describe("Calculator App", () =>{
         cy.get("h2.ng-binding").as('result')
     })
 
-    it("Addition of two number", ()=> {
+    it("Addition of two number", function() {
         cy.get("@firstInput").type(1)
         cy.get("@operator").select('ADDITION')
         cy.get("@secondInput").type(2)
